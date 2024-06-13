@@ -10,12 +10,15 @@ export const myQueue = new Queue("queue", {
 
 myQueue.process(async ({ data }, done) => {
   try {
-    const jsonString = JSON.stringify(data);
-    const writeStream = fs.createWriteStream( 'src/Database/output.txt', { flags: 'a' })
-    writeStream.write(jsonString + '\n')
-    writeStream.end()
-    done();
-    
+    setTimeout(() => {
+      const jsonString = JSON.stringify(data);
+      const writeStream = fs.createWriteStream("src/Database/output.txt", {
+        flags: "a",
+      });
+      writeStream.write(jsonString + "\n");
+      writeStream.end();
+      done();
+    }, 6000);
   } catch (error) {
     const err = error as Error;
     throw new Error(err.message);
