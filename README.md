@@ -5,7 +5,7 @@ Para abordar el problema se sugiere trabajar de la siguiente manera:
 ### Descripción Detallada del Proceso:
 -Recibir solicitudes POST: Las solicitudes POST llegan al servidor.  
 -Job Queue: Las solicitudes se encolan para ser procesadas.  
--Proceso de Trabajos: Permite procesar tarea por tarea. 
+-Proceso de Trabajos: Permite procesar tarea por tarea.  
 -Trabajo en Caché: Los datos validados se guardan temporalmente en la caché.  
 -Insertar en BBDD: Los datos que se encuentran en la caché se insertan en la base de datos.  
 
