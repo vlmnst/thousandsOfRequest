@@ -1,12 +1,12 @@
 Se requiere poder ejecutar una abundante cantidad de request POST 
 Para abordar el problema se sugiere trabajar de la siguiente manera: 
-![image](https://github.com/vlmnst/thousandsOfRequest/assets/81330160/0b23cf42-92bc-4a11-97be-186e6b7a6d17)
+![image](https://github.com/vlmnst/thousandsOfRequest/assets/81330160/7aaddaf1-7185-4dce-9de7-c422609f7886)
+
 
 ### Descripción Detallada del Proceso:
 -Recibir solicitudes POST: Las solicitudes POST llegan al servidor.  
 -Job Queue: Las solicitudes se encolan para ser procesadas.  
--Proceso de Trabajos: Permite procesar tarea por tarea.  
--Trabajo en Caché: Los datos validados se guardan temporalmente en la caché.  
+-Proceso de Informacion: Permite procesar tarea por tarea en memoria.    
 -Insertar en BBDD: Los datos que se encuentran en la caché se insertan en la base de datos.  
 
 ### 👁️ en el archivo src/scriptRequest.ts
