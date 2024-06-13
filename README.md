@@ -5,12 +5,12 @@ Para abordar el problema se sugiere trabajar de la siguiente manera:
 ### Descripción Detallada del Proceso:
 -Recibir solicitudes POST: Las solicitudes POST llegan al servidor.  
 -Job Queue: Las solicitudes se encolan para ser procesadas.  
--Proceso de Trabajos: Los workers procesan las solicitudes de manera asíncrona.  
+-Proceso de Trabajos: Permite procesar tarea por tarea. 
 -Trabajo en Caché: Los datos validados se guardan temporalmente en la caché.  
--Insertar en BBDD: Los lotes de datos se insertan en la base de datos en operaciones de escritura masiva.  
+-Insertar en BBDD: Los datos que se encuentran en la caché se insertan en la base de datos.  
 
 ### 👁️ en el archivo src/scriptRequest.ts
-En la linea 15 se pueden modificar la cantidad de request a realizar al enpoint.  
+En la linea 15 se pueden modificar la cantidad de request a realizar al endpoint.  
 Setearlo con el valor deseado antes de arrojar el comando "npm run dev"  
 
 ### Se inicia el programa con:
